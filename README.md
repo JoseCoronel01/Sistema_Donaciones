@@ -1,0 +1,6 @@
+# Sistema_Donaciones
+Sistema de donaciones
+.NET FRAMEWORK 4.6.1
+VISUAL STUDIO 2019
+SQL SERVER 2019 18.11.1
+WINDOWS FORMS 
