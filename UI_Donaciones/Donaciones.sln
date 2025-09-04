@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCL_Donaciones", "..\PCL_Donaciones\PCL_Donaciones.csproj", "{00C7C1F4-02BC-4925-9B83-7F3D3B0C9D8A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Donaciones", "UI_Donaciones.csproj", "{7ACC43E3-5FC9-42FF-B63F-9ED7FB35E50E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCL_Comun", "..\PCL_Comun\PCL_Comun.csproj", "{04B59C32-2883-43AF-B818-02E602572B4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7ACC43E3-5FC9-42FF-B63F-9ED7FB35E50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ACC43E3-5FC9-42FF-B63F-9ED7FB35E50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ACC43E3-5FC9-42FF-B63F-9ED7FB35E50E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04B59C32-2883-43AF-B818-02E602572B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B59C32-2883-43AF-B818-02E602572B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B59C32-2883-43AF-B818-02E602572B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B59C32-2883-43AF-B818-02E602572B4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
