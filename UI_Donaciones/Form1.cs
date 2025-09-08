@@ -62,7 +62,7 @@ namespace UI_Donaciones
 
         private void mnuVisitas_Click(object sender, EventArgs e)
         {
-            if (strUsuario.Tipo == strUsuarioSistema.eTipo.OPERADOR)
+            if (strUsuario.Tipo == strUsuarioSistema.eTipo.OPERADOR || strUsuario.Tipo == strUsuarioSistema.eTipo.SUPERVISOR)
             {
                 frmListadoVisitas frm = new frmListadoVisitas();
                 frm.ShowDialog();

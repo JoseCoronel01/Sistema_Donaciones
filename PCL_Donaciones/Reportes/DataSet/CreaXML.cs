@@ -9,6 +9,7 @@ namespace PCL_Donaciones.Reportes.DataSet
 {
     public class CreaXML
     {
+        private static string namerep = "C:\\Reportes";
         public static dataSet.DataSet GeneraDataSet(string query = null, string fileName = null, dataSet.DataTable data = null)
         {
             SqlConnection cxn = daoConexion.GetSql("db");
@@ -19,8 +20,7 @@ namespace PCL_Donaciones.Reportes.DataSet
 
             adaptador.Fill(ds);
 
-            string pathWithFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) 
-                + @"\" + fileName + ".xsd";
+            string pathWithFile = namerep + @"\" + fileName + ".xsd";
 
             if (!File.Exists(pathWithFile))
             {
@@ -39,8 +39,7 @@ namespace PCL_Donaciones.Reportes.DataSet
 
         public static void GeneraXSD(dataSet.DataSet ds, string nombreReporte, dataSet.DataTable data = null)
         {
-            string pathWithFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
-                + @"\" + nombreReporte + ".xsd";
+            string pathWithFile = namerep + @"\" + nombreReporte + ".xsd";
 
             if (!File.Exists(pathWithFile))
             {
@@ -59,7 +58,7 @@ namespace PCL_Donaciones.Reportes.DataSet
         {
             if (data != null)
             {
-                string dsFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Empresa.xsd";
+                string dsFile = namerep + @"\Empresa.xsd";
 
                 if (File.Exists(dsFile))
                     File.Delete(dsFile);
