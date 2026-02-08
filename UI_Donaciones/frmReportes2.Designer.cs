@@ -1,6 +1,6 @@
 ﻿namespace UI_Donaciones
 {
-    partial class frmReportes
+    partial class frmReportes2
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,18 @@
         {
             this.SuspendLayout();
             // 
-            // frmReportes
+            // frmReportes2
             // 
-            this.ClientSize = new System.Drawing.Size(772, 443);
-            this.Name = "frmReportes";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "frmReportes2";
+            this.Text = "frmReportes2";
+            this.Load += new System.EventHandler(this.frmReportes2_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

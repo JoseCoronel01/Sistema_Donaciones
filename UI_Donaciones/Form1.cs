@@ -50,14 +50,14 @@ namespace UI_Donaciones
 
         private void mnuDatosEmpresa_Click(object sender, EventArgs e)
         {
-            if (strUsuario.Tipo == strUsuarioSistema.eTipo.SUPERVISOR)
-            {
-                frmDatosEmpresa frm = new frmDatosEmpresa();
-                frm.ShowDialog();
-                imagenFondo.ImageLocation = frm.Fondo;
-            }
-            else
-                MessageBox.Show("Acceso no permitido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //if (strUsuario.Tipo == strUsuarioSistema.eTipo.SUPERVISOR)
+            //{
+            //    frmDatosEmpresa frm = new frmDatosEmpresa();
+            //    frm.ShowDialog();
+            //    //imagenFondo.ImageLocation = frm.Fondo;
+            //}
+            //else
+            //    MessageBox.Show("Acceso no permitido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void mnuVisitas_Click(object sender, EventArgs e)
@@ -85,9 +85,9 @@ namespace UI_Donaciones
 
                 mnuUsuario.Text = "HOLA " + this.strUsuario.Usuario.ToUpper() + " - MODO " + this.strUsuario.Tipo.ToString();
 
-                var obj = daoDatosEmpresa.GetObject();
-                if (obj != null)
-                    imagenFondo.ImageLocation = obj.RutaDirectorio;
+                //var obj = daoDatosEmpresa.GetObject();
+                //if (obj != null)
+                //    imagenFondo.ImageLocation = obj.RutaDirectorio;
             }
         }
 
@@ -109,8 +109,7 @@ namespace UI_Donaciones
 
         private void mnuListadoDeDonaciones_Click(object sender, EventArgs e)
         {
-            frmReportes frm = new frmReportes("Donaciones");
-            frm.Show();
+            frmReportes2 frm = new frmReportes2("Donaciones");
         }
 
         private void mnuDonacinesFecha_Click(object sender, EventArgs e)
@@ -121,14 +120,11 @@ namespace UI_Donaciones
 
         private void historialPorDonadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ListadoDeDonadores
-            frmReportes frm = new frmReportes("Donadores");
-            frm.Show();
+            frmReportes2 frm = new frmReportes2("Donadores");
         }
 
         private void historialDeDonacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Historia de donaciones
             frmHistPorDonador frm = new frmHistPorDonador();
             frm.ShowDialog();
         }

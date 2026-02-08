@@ -114,40 +114,43 @@ namespace PCL_Donaciones.BusinessRules
 
                 #region 2do Nivel =ARCANGELES=
 
-                DataTable dtAux2 = arcangeles.Copy();
-
-                int index2 = 0;
-
-                while (dtAux2.Rows.Count > 0)
+                if (arcangeles != null)
                 {
-                    int id2 = int.Parse(arcangeles.Rows[index2]["Id"].ToString());
+                    DataTable dtAux2 = arcangeles.Copy();
 
-                    DataTable angeles = ObtenerHijos(id2);
+                    int index2 = 0;
 
-                    object[] arr2 = arcangeles.Rows[index2].ItemArray;
-
-                    dtXml.Rows.Add(arr2);
-
-                    #region 3er Nivel =ANGELES=
-
-                    if (angeles != null)
+                    while (dtAux2.Rows.Count > 0)
                     {
-                        DataTable dtAux3 = angeles.Copy();
+                        int id2 = int.Parse(arcangeles.Rows[index2]["Id"].ToString());
 
-                        foreach (DataRow row in dtAux3.Rows)
+                        DataTable angeles = ObtenerHijos(id2);
+
+                        object[] arr2 = arcangeles.Rows[index2].ItemArray;
+
+                        dtXml.Rows.Add(arr2);
+
+                        #region 3er Nivel =ANGELES=
+
+                        if (angeles != null)
                         {
-                            object[] arr3 = row.ItemArray;
+                            DataTable dtAux3 = angeles.Copy();
 
-                            dtXml.Rows.Add(arr3);
+                            foreach (DataRow row in dtAux3.Rows)
+                            {
+                                object[] arr3 = row.ItemArray;
+
+                                dtXml.Rows.Add(arr3);
+                            }
                         }
+
+                        #endregion
+
+                        index2++;
+
+                        dtAux2.Rows[0].Delete();
+                        dtAux2.AcceptChanges();
                     }
-
-                    #endregion
-
-                    index2++;
-
-                    dtAux2.Rows[0].Delete();
-                    dtAux2.AcceptChanges();
                 }
 
                 #endregion

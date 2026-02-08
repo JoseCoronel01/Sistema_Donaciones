@@ -31,8 +31,7 @@ namespace UI_Donaciones
             bool si = int.TryParse(cbDonador.SelectedValue.ToString(), out id);
             if (si)
             {
-                frmReportes frm = new frmReportes("HistorialPorDonador", id);
-                frm.Show();
+                frmReportes2 frm = new frmReportes2("HistorialPorDonador", id);
             }
             else
                 MessageBox.Show("No ha seleccionado al donador", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
